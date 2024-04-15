@@ -12,8 +12,8 @@ const Sidebar = () => {
   return (
     <aside className='left-0 top-0 flex h-screen w-fit flex-col justify-between p-6 max-sm:hidden lg:w-[264px] shrink-0'>
       {sideBarLinks.map(links => {
-        const isActive = pathName === links.route
-        // || pathName.startsWith(links.route)
+        const isActive =
+          pathName === links.route || pathName.startsWith(`${links.route}/}`)
         return (
           <Link
             href={links.route}
@@ -21,7 +21,7 @@ const Sidebar = () => {
             className={cn(
               'flex gap-4 p-4 rounded-lg justify-start items-center ',
               {
-                'bg-blue-800': isActive
+                'bg-blue-500': isActive
               }
             )}
           >
