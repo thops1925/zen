@@ -18,6 +18,9 @@ const config = {
       },
     },
     extend: {
+      backgroundImage:{
+      hero: "url('/images/thops.png')",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
