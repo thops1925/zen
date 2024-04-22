@@ -7,9 +7,9 @@ const HomeLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className='flex-1'>
       <Navbar />
-      <div className='lg:container sm:container grid grid-cols-1 flex-1  md:grid md:grid-cols-[40px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[240px_minmax(0,1fr)] lg:gap-10"'>
+      <div className='lg:container flex flex-row mx-auto sm:container'>
         <Sidebar />
-        <main className='relative py-6 lg:gap-10 lg:py-8 xl:grid xl:grid-cols w-full'>
+        <main className='lg:p-6 md:p-4 p-2  w-full'>
           <div className='mx-auto w-full min-w-0'>{children}</div>
         </main>
       </div>

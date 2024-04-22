@@ -22,7 +22,7 @@ const MobileNav = () => {
     <section className='w-full max-w-[260px]'>
       <Sheet>
         <SheetTrigger asChild>
-          <HamburgerMenuIcon className='h-[32px] w-[32px] max-sm:size-7 cursor-pointer sm:hidden' />
+          <HamburgerMenuIcon className='h-[32px] w-[32px] max-sm:size-7 cursor-pointer lg:hidden md:hidden' />
         </SheetTrigger>
         <SheetContent side='left' className='border-none'>
           <Link href='/' className='flex items-center gap-1 '>
@@ -36,8 +36,8 @@ const MobileNav = () => {
             <p className='font-bold text-lg'>ZEN</p>
           </Link>
 
-          <div className='flex h-[calc(100vh-72px)] flex-col justify-between overflow-y-auto'>
-            <SheetClose asChild>
+          <SheetClose asChild>
+            <div className='flex h-[calc(100vh-72px)] flex-col justify-between overflow-y-auto'>
               <section className='w-full flex-col gap-6'>
                 {sideBarLinks.map(links => {
                   const isActive =
@@ -56,22 +56,15 @@ const MobileNav = () => {
                           }
                         )}
                       >
-                        <Image
-                          src={links.imgUrl}
-                          alt={links.label}
-                          width={24}
-                          height={24}
-                        />
-                        <p className='font-sm font-semibold text-white'>
-                          {links.label}
-                        </p>
+                        {links.imgUrl}
+                        <p className='text-sm'>{links.label}</p>
                       </Link>
                     </SheetClose>
                   )
                 })}
               </section>
-            </SheetClose>
-          </div>
+            </div>
+          </SheetClose>
         </SheetContent>
       </Sheet>
     </section>

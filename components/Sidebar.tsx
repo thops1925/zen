@@ -25,13 +25,8 @@ const Sidebar = () => {
               }
             )}
           >
-            <Image
-              src={links.imgUrl}
-              alt={links.label}
-              width={24}
-              height={24}
-            />
-            <p className='font-xl text-sm max-lg:hidden'>{links.label}</p>
+            {links.imgUrl}
+            <p className='text-sm max-lg:hidden'>{links.label}</p>
           </Link>
         )
       })}

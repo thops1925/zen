@@ -1,30 +1,36 @@
 import { ModeToggle } from '@/components/ModeToggle'
-import { HomeIcon } from '@radix-ui/react-icons'
+import {
+  EyeNoneIcon,
+  HomeIcon,
+  MixIcon,
+  PinLeftIcon,
+  PinRightIcon
+} from '@radix-ui/react-icons'
 
 export const sideBarLinks = [
   {
     label: 'Home',
-    imgUrl: '/icons/Home.svg',
+    imgUrl: <HomeIcon />,
     route: '/'
   },
   {
     label: 'Upcoming',
-    imgUrl: '/icons/upcoming.svg',
+    imgUrl: <PinRightIcon />,
     route: '/upcoming'
   },
   {
     label: 'Previous',
-    imgUrl: '/icons/previous.svg',
+    imgUrl: <PinLeftIcon />,
     route: '/previous'
   },
   {
     label: 'Recordings',
-    imgUrl: '/icons/recordings.svg',
+    imgUrl: <MixIcon />,
     route: '/recordings'
   },
   {
     label: 'Private Room',
-    imgUrl: '/icons/add-personal.svg',
+    imgUrl: <EyeNoneIcon />,
     route: '/personal-room'
   }
 ]

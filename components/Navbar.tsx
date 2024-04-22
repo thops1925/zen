@@ -20,7 +20,7 @@ export const Navbar = () => {
           /> */}
           <p className='text-[24px] font-extrabold'>ZEN</p>
         </Link>
-        <nav className='flex items-center gap-2  justify-between'>
+        <nav className='flex items-center gap-2 justify-between '>
           <SignedIn>
             <UserButton />
           </SignedIn>
