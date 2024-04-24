@@ -10,7 +10,7 @@ const Sidebar = () => {
   const pathName = usePathname()
 
   return (
-    <aside className='fixed top-14 z-30 -ml-2 hidden h-[calc(100vh-3.5rem)]  shrink-0 md:sticky md:block mx-auto py-6'>
+    <aside className=' py-6 md:block hidden'>
       {sideBarLinks.map(links => {
         const isActive =
           pathName === links.route || pathName.startsWith(`${links.route}/}`)
@@ -26,7 +26,7 @@ const Sidebar = () => {
             )}
           >
             {links.imgUrl}
-            <p className='text-sm max-lg:hidden'>{links.label}</p>
+            <p className='text-sm  max-lg:hidden'>{links.label}</p>
           </Link>
         )
       })}

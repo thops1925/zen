@@ -3,15 +3,10 @@ import {
   Sheet,
   SheetClose,
   SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
   SheetTrigger
 } from '@/components/ui/sheet'
 import { HamburgerMenuIcon } from '@radix-ui/react-icons'
-import Image from 'next/image'
 import Link from 'next/link'
-import Sidebar from './Sidebar'
 import { cn } from '@/lib/utils'
 import { sideBarLinks } from '@/constants'
 import { usePathname } from 'next/navigation'
