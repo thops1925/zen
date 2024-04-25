@@ -8,12 +8,15 @@ import {
   PlusIcon,
   RocketIcon
 } from '@radix-ui/react-icons'
+import MeetingModal from './MeetingModal'
 
 const MeetingTypeList = () => {
   const router = useRouter()
   const [Meeting, setMeeting] = useState<
     'isScheduleMeeting' | 'isJoinMeeting' | 'isInstantMeeting' | undefined
   >()
+
+  const createMeeting = () => {}
   return (
     <section className='grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4'>
       <HomeCard
@@ -21,7 +24,7 @@ const MeetingTypeList = () => {
         title='new Meeting'
         description='Start an  instant meeting'
         className='bg-orange-600'
-        handleClick={() => setMeeting('isJoinMeeting')}
+        handleClick={() => setMeeting('isInstantMeeting')}
       />
       <HomeCard
         icon={<PieChartIcon />}
@@ -43,6 +46,14 @@ const MeetingTypeList = () => {
         description='Join Meeting'
         className='bg-rose-600'
         handleClick={() => setMeeting('isJoinMeeting')}
+      />
+      <MeetingModal
+        isOpen={Meeting === 'isInstantMeeting'}
+        isClose={() => setMeeting(undefined)}
+        title='Start Meeting'
+        className='text-center'
+        buttonText='Start Meeting'
+        handleClick={createMeeting}
       />
     </section>
   )
